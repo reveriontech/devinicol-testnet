@@ -40,7 +40,7 @@ export default defineConfig(({ command, mode }) => {
            //     overlay: false, // Disable HMR overlay (not recommended for production)
            // }
 
-                open: process.env.NODE_ENV === 'development' && !process.env.VERCEL, // Only open in dev mode and not on Vercel
+               open: process.env.VERCEL ? false : true, // Don't open browser in Vercel environment
                 proxy: {
                 },
                 hmr: {
