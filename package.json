@@ -51,7 +51,7 @@
     "yarn": "^1.22.17"
   },
   "scripts": {
-    "start": "vite --port 3000",
+    "start": "vite --port 3000 --no-open",
     "build": "vite build",
     "serve": "vite preview",
     "test": "your-test-script-here",
