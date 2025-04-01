@@ -33,12 +33,20 @@ export default defineConfig(({ command, mode }) => {
             }
         },
         server: {
-            open: true, // Automatically open the browser
-            proxy: {
-            },
-            hmr: {
-                overlay: false, // Disable HMR overlay (not recommended for production)
-            }
+           // open: true, // Automatically open the browser
+          //  proxy: {
+          //  },
+          //  hmr: {
+           //     overlay: false, // Disable HMR overlay (not recommended for production)
+           // }
+
+                open: process.env.NODE_ENV === 'development' && !process.env.VERCEL, // Only open in dev mode and not on Vercel
+                proxy: {
+                },
+                hmr: {
+                    overlay: false, // Disable HMR overlay (not recommended for production)
+                }
+            
         },
         optimizeDeps: {
             esbuildOptions: {
