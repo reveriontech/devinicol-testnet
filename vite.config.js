@@ -63,6 +63,7 @@ export default defineConfig(({ command, mode }) => {
             }
         },
         build: {
+            outDir: 'dist', // Vercel expects output in 'dist' by default
             commonjsOptions: {
                 transformMixedEsModules: true // Allow CommonJS modules to be used with ES modules
             },
